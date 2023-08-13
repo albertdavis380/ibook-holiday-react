@@ -17,7 +17,7 @@ const useAuth = (emailRef) => {
 
   useEffect(() => {
     if (loginStatus === "success") {
-      navigate("/products");
+      navigate("/home");
     } else if (loginStatus === "failed") {
       let errorFields = Object.keys(loginInfo);
       errorFields.forEach((field) => {
@@ -29,7 +29,7 @@ const useAuth = (emailRef) => {
 
   useEffect(() => {
     if (userToken != undefined) {
-      navigate("/products");
+      navigate("/home");
     }
     // eslint-disable-next-line
   }, [userToken]);
