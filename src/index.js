@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import App from "./components/App";
 import { Provider } from "react-redux";
 import appReducer from "./store";
-import { productApi } from "./store/queries/products";
+
 
 const store = configureStore({
   reducer: appReducer,
@@ -13,7 +13,6 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
     }).concat(
-      productApi.middleware,
     ),
 });
 
