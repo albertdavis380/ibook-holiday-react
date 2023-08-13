@@ -53,7 +53,9 @@ const useAuth = (emailRef) => {
       return errors;
     },
     onSubmit: (values) => {
-      emailRef.current = values.email;
+
+      console.log("hello workd",values);
+    
 
       setLoginStatus("pending");
 
